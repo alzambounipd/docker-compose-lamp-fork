@@ -22,13 +22,14 @@ libsqlite3-0 && \
     apt-get -y --no-install-recommends install default-mysql-client \
 zlib1g-dev \
 libzip-dev \
-libicu-dev && \
+libicu-dev \
+libxslt1-dev && \
     apt-get -y --no-install-recommends install --fix-missing apt-utils \
 build-essential \
 git \
 curl \
 libonig-dev \
-fail2ban && \ 
+fail2ban && \
     apt-get install -y iputils-ping && \
     apt-get -y --no-install-recommends install --fix-missing libcurl4 \
 libcurl4-openssl-dev \
@@ -76,7 +77,8 @@ RUN docker-php-ext-install pdo_mysql && \
     docker-php-ext-install mbstring && \
     docker-php-ext-install gettext && \
     docker-php-ext-install calendar && \
-    docker-php-ext-install exif
+    docker-php-ext-install exif && \
+    docker-php-ext-install xsl
 
 
 # Install Freetype 
